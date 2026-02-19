@@ -8,7 +8,7 @@ document.getElementById("login-btn").addEventListener('click',function(){
 
     if(usr === '01234567890' && pass === '1234'){
         alert("Login Successful");
-        window.location.assign("/home.html");
+        window.location.assign("home.html");
     }
     else{
         alert("Try Again");
