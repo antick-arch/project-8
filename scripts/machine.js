@@ -4,3 +4,14 @@ function getInputFrom(id){
     console.log(inputValue);
     return inputValue;
 }
+
+function getBalance(id){
+    const balanceInput = document.getElementById("balance");
+    const balance = balanceInput.innerText;
+    console.log(balance);
+    return Number(balance);
+}
+function setBalanece(value){
+    const balanceElement = document.getElementById("balance");
+    balanceElement.innerText = value;
+}

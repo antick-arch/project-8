@@ -29,18 +29,20 @@
                     <img src="./assets/logo.png" alt="logo">
                 </div>
                 <div>
-                   <h2 class="font-extrabold text-[18px] text-neutral">$<span id="balance">45000</span></h2> 
-                   <p class="text-neutral/50">Available Balance</p>
+                    <h2 class="font-extrabold text-[18px] text-neutral">$<span id="balance">45000</span></h2>
+                    <p class="text-neutral/50">Available Balance</p>
                 </div>
             </div>
             <div class="right">
-                <a href="/index.html" class="btn text-neutral/50 rounded-lg"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log Out</a>
+                <a href="/index.html" class="btn text-neutral/50 rounded-lg"><i
+                        class="fa-solid fa-arrow-right-from-bracket"></i>Log Out</a>
             </div>
         </section>
     </header>
     <section class="w-11/12 mx-auto py-8 space-y-5">
         <h2 class="font-bold text-2xl">Welcome to Pay<span class="text-primary">oo</span></h2>
-        <p class="text-neutral/50 leading-6">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+        <p class="text-neutral/50 leading-6">Enjoy easy and convenient financial services with us. Cashout charge is low
+            and </p>
         <div class="butons grid grid-cols-3 gap-3">
             <button class="btn flex-col h-full py-4 btn-primary btn-soft">
                 <img src="./assets/opt-1.png" alt="">
@@ -68,19 +70,50 @@
             </button>
         </div>
     </section>
-
-    <section class="w-11/12 mx-auto space-y-3">
+    <section id="add-money" class="w-11/12 mx-auto space-y-3 mb-7">
+        <h2 class="font-bold">Add Money</h2>
+        <div class="hero bg-base-200">
+            <div class="card bg-base-100 w-full shadow  rounded-3xl">
+                <div class="card-body">
+                    <fieldset class="fieldset space-y-1">
+                        <legend class="fieldset-legend text-neutral text-[1rem] font-medium">Select A Bank</legend>
+                        <select id="add-money-bank" class="select w-full rounded-full bg-base-200">
+                            <option disabled selected>Select bank</option>
+                            <option value="IIBL">IIBL</option>
+                            <option value="DBBL">DBBL</option>
+                            <option value="CITY">City Bank</option>
+                        </select>
+                        <label class="label text-neutral text-[1rem] font-medium">Bank Account Number</label>
+                        <input id="add-money-number" type="text" class="input rounded-full w-full bg-base-200"
+                            value="01234567890" minlength="11" maxlength="11"
+                            placeholder="Enter 11 digit account number" />
+                        <label class="label text-neutral text-[1rem] font-medium">Amount to Add</label>
+                        <input id="add-money-amount" type="number" class="input rounded-full w-full bg-base-200"
+                            placeholder="Add Amount to withdraw" />
+                        <label class="label text-neutral text-[1rem] font-medium">Pin Number</label>
+                        <input id="add-money-pin" type="password" class="input rounded-full w-full bg-base-200" maxlength="4"
+                            placeholder="Enter 4 digit pin number" />
+                        <button id="add-money-btn" class="btn btn-primary mt-4 rounded-full">Add Money</button>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="cashout" class="w-11/12 mx-auto space-y-3 hidden">
         <h2 class="font-bold">Cash Out</h2>
-        <div class="hero bg-base-200">    
+        <div class="hero bg-base-200">
             <div class="card bg-base-100 w-full shadow  rounded-3xl">
                 <div class="card-body">
                     <fieldset class="fieldset space-y-1">
                         <label class="label text-neutral text-[1rem] font-medium">Agent Number</label>
-                        <input id="cahsout-number" type="text" class="input rounded-full w-full bg-neutral/10" value="01234567890" minlength="11" maxlength="11" placeholder="Enter 11 digit number"/>
+                        <input id="cahsout-number" type="text" class="input rounded-full w-full bg-base-200"
+                            value="01234567890" minlength="11" maxlength="11" placeholder="Enter 11 digit number" />
                         <label class="label text-neutral text-[1rem] font-medium">Amount</label>
-                        <input id="cahsout-amount" type="number" class="input rounded-full w-full bg-neutral/10" placeholder="Enter amount to withdraw"/>
+                        <input id="cahsout-amount" type="number" class="input rounded-full w-full bg-base-200"
+                            placeholder="Enter amount to withdraw" />
                         <label class="label text-neutral text-[1rem] font-medium">Pin Number</label>
-                        <input id="pin" type="password" class="input rounded-full w-full bg-neutral/10" maxlength="4" placeholder="Enter 4 Digit Pin"/>
+                        <input id="pin" type="password" class="input rounded-full w-full bg-base-200" maxlength="4"
+                            placeholder="Enter 4 Digit Pin" />
                         <button id="cashout-btn" class="btn btn-primary mt-4 rounded-full">Withdraw Money</button>
                     </fieldset>
                 </div>
@@ -88,6 +121,7 @@
         </div>
     </section>
     <script src="./scripts/machine.js"></script>
+    <script src="./scripts/addMoney.js"></script>
     <script src="./scripts/cashout.js"></script>
 </body>
 
