@@ -1,23 +1,20 @@
 document.getElementById("cashout-btn").addEventListener('click', function () {
-    const cashoutNumberInput = document.getElementById("cahsout-number");
-    const cashoutNumber = cashoutNumberInput.value;
-    console.log(cashoutNumber);
+    const cashoutNumber = getInputFrom("cahsout-number");
+    if(cashoutNumber.length != 11){
+        alert("invalid number");
+        return;
+    }
+    const cashoutAmount = getInputFrom("cahsout-amount");
 
-    const cashoutAmountInut = document.getElementById("cahsout-amount");
-    const cashoutAmount = cashoutAmountInut.value;
-    console.log(cashoutAmount);
-
-    const balanceInput = document.getElementById("balance")
+    const balanceInput = document.getElementById("balance");
     const balance = balanceInput.innerText;
     console.log(balance);
 
-    if (Number(cashoutAmount) > Number(balance) || Number(balance) < 0) {
+    if (Number(cashoutAmount) > Number(balance) || Number(cashoutAmount) < 0) {
         alert("Invalid amount");
         return;
     }
-    const pinInput = document.getElementById("pin");
-    const pin = pinInput.value;
-    console.log(pin);
+    const pin = getInputFrom("pin");
     if (pin === '1234') {
         alert("Withdraw Successful");
         const newBalance = Number(balance) - Number(cashoutAmount);
