@@ -22,6 +22,16 @@ document.getElementById("cashout-btn").addEventListener('click', function () {
         }
 
         setBalanece(newBalance);
+
+        const history = document.getElementById("history-container");
+        const newHistory = document.createElement("div");
+        newHistory.innerHTML = `
+        <div class="transaction-card p-5 bg-base-100">
+        Withdraw ${cashoutAmount} bdt from main balance ${balance} ${new Date()}
+            </div>
+        `;
+        history.append(newHistory);
+
     }
     else {
         alert("Invalid pin");

@@ -16,6 +16,14 @@ document.getElementById("add-money-btn").addEventListener('click',function(){
         alert(`New balance added from ${bankAcc} and your current balance is ${newBalance}
             ${new Date()}`)
         setBalanece(newBalance);
+        const history = document.getElementById("history-container");
+        const newHistory = document.createElement("div");
+        newHistory.innerHTML = `
+        <div class="transaction-card p-5 bg-base-100">
+        ${addMoneyAmount} bdt added from ${bankAcc} bank and your current balance is ${newBalance} ${new Date()}
+            </div>
+        `;
+        history.append(newHistory);
     }
     else{
         alert("Invalid pin. \n Please try again");

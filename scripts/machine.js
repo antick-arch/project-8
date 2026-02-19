@@ -19,9 +19,11 @@ function setBalanece(value){
 function showOnly(id){
     const addMoney = document.getElementById("add-money");
     const cashout = document.getElementById("cashout");
+    const history = document.getElementById("history");
 
     addMoney.classList.add("hidden");
     cashout.classList.add("hidden");
+    history.classList.add("hidden");
 
     const selectedId = document.getElementById(id);
     selectedId.classList.remove("hidden");
