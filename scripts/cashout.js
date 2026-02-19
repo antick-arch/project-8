@@ -11,7 +11,7 @@ document.getElementById("cashout-btn").addEventListener('click', function () {
     const balance = balanceInput.innerText;
     console.log(balance);
 
-    if (Number(cashoutAmount) > Number(balance)) {
+    if (Number(cashoutAmount) > Number(balance) || Number(balance) < 0) {
         alert("Invalid amount");
         return;
     }
