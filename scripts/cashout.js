@@ -21,6 +21,10 @@ document.getElementById("cashout-btn").addEventListener('click', function () {
     if (pin === '1234') {
         alert("Withdraw Successful");
         const newBalance = Number(balance) - Number(cashoutAmount);
+        if(newBalance<0){
+            alert("Invalid Amount");
+            return;
+        }
         balanceInput.innerText = newBalance;
     }
     else{
